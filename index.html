@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Puzzle</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="layout.js" defer></script>
+    <script src="puzzleGenerator.js" defer></script>
+    <script src="pdfCreator.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="settings.js" defer></script>
+</head>
+<body>
+    <div class="generator no-print">
+        <div class="settings">
+            <button id="settings_button" class="settings_button">Settings</button>
+            <div id="settings_dropdown" class="settings_dropdown hidden">
+                <div class="settings_line">
+                    <p>Maximum number of numbers in a row:</p>
+                    <input type="number" name="maxNum" id="maxNum" value=4>
+                </div>
+                <div class="settings_line">
+                    <p>Possible Maximum Number:</p>
+                    <input type="number" name="max" id="max" value=20>
+                </div>
+                <div class="settings_line">
+                    <p>Negative numbers:</p>
+                    <input type="checkbox" name="canBeNegative" id="canBeNegative" checked="true">
+                </div>
+            </div>
+        </div>
+        <input type="text" name="solution" id="solution" placeholder="solution">
+        <div class="button-row">
+            <button id="generate" disabled="true" >GENERATE</button>
+            <button id="print" disabled="true" >PRINT</button>
+            <button id="download" onclick="download()" disabled="true">DOWNLOAD</button>
+        </div>
+    </div>
+    <div id="to-print" class="to-print">
+        <div id="chars" class="chars"></div>
+        <div id="rows" class="rows"></div>
+        <div class="solution">
+            <p>MEGOLDÁS:</p>
+            <div class="solution_line"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+.chars {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    justify-content: center;
+    margin: 20px;
+    margin-top: 80px
+}
+
+.char {
+    text-align: center;
+    padding: 6px;
+    border: 1px solid black;
+}
+
+.char p {
+    width: 14px;
+    font-size: 1rem;
+    color: black;
+    margin: 0;
+}
+
+.char p:first-child {
+    margin-bottom: 5px;
+}
+
+.rows {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 30px;
+    max-width: 500px;
+    padding-right: 150px;
+}
+
+.row {
+    color: black;
+    font-size: 1rem;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+}
+
+.row p {
+    margin: 0;
+}
+
+.solution_space {
+    width: 40px;
+    height: 1.5rem;
+    border: 1px solid black;
+}
+
+.generator {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+input {
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 200px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: darkturquoise;
+    cursor: pointer;
+}
+button:hover {
+    background-color: lightskyblue;
+}
+
+.solution {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-top: 20px;
+    align-items: center;
+    gap: 10px;
+}
+
+.solution_line {
+    height: 1rem;
+    width: 150px;
+    border-bottom: 1px solid black;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.settings_dropdown {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.settings_line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.settings_line input[type=number] {
+    width: 100px;
+}
+.settings_line input[type=checkbox] {
+    width: 40px;
+}
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
